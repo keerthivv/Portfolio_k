@@ -1,0 +1,59 @@
+@import "../../global.scss";
+.intro{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 40px;
+        h2{
+            font-size: 35px;
+        }
+        h1{
+            font-size: 60px;
+            margin: 10px 0px;
+            color: crimson;
+        }
+        h3{
+            font-size: 30px;
+        }
+
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        .git{
+            font-size: 50px;
+            padding-right: 15px;
+            color: $mainColor;
+        }
+        .link{
+            color: $mainColor;
+            font-size: 50px;
+            padding-left: 15px;
+        }
+    }
+    .arrow{
+        
+        position: absolute;
+        bottom: 10px;
+        font-size: 80px;
+        animation: arrowBlink 2s infinite;
+    }
+    @keyframes arrowBlink {
+        100%{
+            opacity: 0;
+        }
+    }
+
+}

@@ -1,0 +1,101 @@
+@import "../../global.scss";
+.about{
+    background-color:white;
+    display: flex;
+    position: relative;
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
+    .left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 20px;
+        h2{
+          font-weight: 700;
+          font-size: 35px;
+          color: crimson;
+        }
+        p{
+          text-align: justify;
+          padding: 10px 20px;
+          font-size: 20px;
+          @include mobile{
+            font-size: 15px;
+          }
+          
+        }
+        .button{
+          display: flex;
+        button{
+          background-color: crimson;
+          padding: 10px 15px;
+          border-radius: 16px;
+          border: 1px none black;
+          color: white;
+          font-size: 25px;
+          margin:20px;
+          @include mobile{
+            font-size: 20px;
+            margin:10px;
+          }
+          &:hover{
+            background-color: rgb(74, 7, 20);
+            color: white;
+            transform: scale(1.1);
+          }
+        }
+      }
+       
+    }
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 10px 20px;
+        h2{
+          font-weight: 700;
+          font-size: 35px;
+          color: crimson;
+        }
+        .skills-grid {
+          margin: 50Px 20px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); // 2 columns
+          grid-template-rows: repeat(3, 1fr);    // 3 rows
+          gap: 20px; // Gap between grid items
+      
+          .skill {
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+          }
+        }
+       
+    }
+
+
+  .arrow-container {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .arrow {
+    font-size: 80px;
+    animation: arrowBlink 2s infinite;
+  }
+  @keyframes arrowBlink {
+      100%{
+          opacity: 0;
+      }
+  }
+}
